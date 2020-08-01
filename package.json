@@ -4,17 +4,37 @@
   "description": "this is pure ts code finish a small frame, Write casually",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "npm run clean-build-steps && rm -rf dist",
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development --open",
+    "test": "karma start karma.conf.js"
   },
   "author": "speanut",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "@babel/core": "^7.10.4",
+    "express": "^4.17.1",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.3",
+    "@types/node": "^14.0.14",
     "babel-preset-env": "^1.7.0",
+    "css-loader": "^4.2.0",
+    "file-loader": "^6.0.0",
+    "jest": "^26.1.0",
+    "karma": "^2.0.4",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.1.2",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-typescript": "^3.0.13",
+    "node-sass": "^4.14.1",
+    "puppeteer": "^1.6.1",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "ts-jest": "^26.1.1",
     "ts-loader": "^7.0.1",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",

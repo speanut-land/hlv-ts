@@ -3,15 +3,25 @@ const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
+  watch: true,
   entry: {
-    app: path.join(__dirname, "./src/index.ts"),
+    app: path.join(__dirname, "./src/main.ts"),
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        loader: "ts-loader",
+        test: /\.ts?$/,
+        use: "ts-loader",
         exclude: /node_modules/,
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ["file-loader"],
       },
     ],
   },

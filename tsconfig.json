@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "./dist ",
+    "outDir": "./dist",
     "rootDir": "./src",
     "target": "ESNext",
-    "lib": ["ES2015", "DOM"]
+    "lib": ["ES2015", "DOM"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["reflect-metadata", "jest"]
   }
 }
