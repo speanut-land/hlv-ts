@@ -1,25 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-*::before {
-  box-sizing: border-box;
-}
-*::after {
-  box-sizing: border-box;
-}
-ul {
-  padding: 0;
-}
-li {
-  list-style: none;
-}
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
 .bg-btn {
   position: fixed;
   top: 25px;
@@ -67,33 +45,33 @@ li {
   cursor: pointer;
   border: 2px solid transparent;
 }
-.tools button.save {
+.tools .save {
   background-image: url("../image/save.png");
 }
-.tools button.brush {
+.tools .brush {
   background-image: url("../image/pen.png");
 }
-.tools button.eraser {
+.tools .eraser {
   background-image: url("../image/eraser.png");
 }
-.tools button.clear {
+.tools .clear {
   background-image: url("../image/clear.png");
 }
-.tools button.undo {
+.tools .undo {
   background-image: url("../image/undo_sel.png");
 }
-.tools button.redo {
+.tools .redo {
   background-image: url("../image/redo_sel.png");
 }
-.tools button.undo.active {
+.tools .undo.active {
   background-image: url("../image/undo.png");
   border-color: transparent;
 }
-.tools button.redo.active {
+.tools .redo.active {
   background-image: url("../image/redo.png");
   border-color: transparent;
 }
-.tools button.active {
+.tools .active {
   border-radius: 5px;
   border-color: #1398e6;
 }
@@ -234,27 +212,6 @@ li {
   width: 2px;
   height: 2px;
 }
-input[type="range"] {
-  -webkit-appearance: none;
-  width: 180px;
-  height: 24px;
-  outline: none;
-}
-input[type="range"]::-webkit-slider-runnable-track {
-  background-color: #dbdbdb;
-  height: 4px;
-  border-radius: 5px;
-}
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  /* border: 5px solid #fff; */
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #ff4081;
-  cursor: pointer;
-  margin-top: -4px;
-}
 .pen-color li {
   position: relative;
   float: left;
@@ -289,16 +246,4 @@ input[type="range"]::-webkit-slider-thumb {
 canvas {
   display: block;
   background: #fff;
-}
-
-@media screen and (max-width: 768px) {
-  .color-group {
-    top: 80px;
-  }
-  .tools {
-    bottom: 15px;
-  }
-  .pen-detail {
-    bottom: 80px;
-  }
 }

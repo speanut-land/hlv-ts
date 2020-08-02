@@ -1,23 +1,18 @@
-const http = require("http");
-const express = require("express");
-const app = express();
+const NodeMediaServer = require("node-media-server");
 
-app.use((req, res, next) => {
-  res.removeHeader("X-Powered-By");
-  next();
-});
-app.get("/", (req, res) => res.send("1"));
+const config = {
+  rtmp: {
+    port: 1935,
+    chunk_size: 60000,
+    gop_cache: true,
+    ping: 30,
+    ping_timeout: 60,
+  },
+  http: {
+    port: 8000,
+    allow_origin: "*",
+  },
+};
 
-app.listen(3001, () => {
-  console.log("http server is success ");
-});
-
-// const http = require("http");
-
-// const requestListener = function (req, res) {
-//   res.writeHead(502);
-//   res.end("Hello, World!");
-// };
-
-// const server = http.createServer(requestListener);
-// server.listen(3001);
+var nms = new NodeMediaServer(config);
+nms.run();

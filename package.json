@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/core": "^7.10.4",
     "express": "^4.17.1",
+    "node-media-server": "^2.2.2",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
