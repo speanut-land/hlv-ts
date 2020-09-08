@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <div>
+      <img
+        id="source"
+        src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+        width="300"
+        height="227"
+      />
+    </div>
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      var image = document.getElementById("source");
+
+      ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
+      var img = new Image();
+      img.crossOrigin = "";
+      img.onload = function () {
+        ctx.drawImage(this, 0, 0);
+        ctx.getImageData(0, 0, this.width, this.height);
+      };
+      img.src = "https://avatars3.githubusercontent.com/u/496048?s=120&v=4";
+    </script>
+  </body>
+</html>
