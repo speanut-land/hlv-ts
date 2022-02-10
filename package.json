@@ -31,7 +31,7 @@
     "karma-jasmine": "^1.1.2",
     "karma-mocha-reporter": "^2.2.5",
     "karma-typescript": "^3.0.13",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "puppeteer": "^1.6.1",
     "sass-loader": "^9.0.2",
     "style-loader": "^1.2.1",
